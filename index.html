@@ -22,12 +22,26 @@
     </script>
 </head>
 <body class="font-sans bg-gray-50">
-    <!-- WhatsApp Floating Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/+91 90872 93268" target="_blank" class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center">
-            <i class="fab fa-whatsapp text-2xl"></i>
-        </a>
+<div class="fixed bottom-6 right-6 z-50 group">
+    <!-- Main Button -->
+    <button class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 flex items-center justify-center">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </button>
+    
+    <!-- Dropdown Options -->
+    <div class="absolute bottom-full right-0 mb-2 hidden group-hover:block">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden w-48">
+            <a href="https://wa.me/+91 99525 20181" target="_blank" 
+               class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition">
+               <i class="fab fa-whatsapp text-green-500 mr-2"></i> Gopi
+            </a>
+            <a href="https://wa.me/+919087293269" target="_blank" 
+               class="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition">
+               <i class="fab fa-whatsapp text-green-500 mr-2"></i> Jeeva
+            </a>
+        </div>
     </div>
+</div>
 
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-40">
