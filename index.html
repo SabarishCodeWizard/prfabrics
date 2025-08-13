@@ -48,30 +48,60 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-4">
-                    <a href="#" class="flex items-center">
-                        <span class="text-2xl font-bold text-primary">PR<span
-                                class="text-secondary">FABRICS</span></span>
-                    </a>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-primary hover:text-secondary transition">Home</a>
-                    <a href="#fabrics" class="text-primary hover:text-secondary transition">Fabrics</a>
-                    <a href="#about" class="text-primary hover:text-secondary transition">About</a>
-                    <a href="#contact" class="text-primary hover:text-secondary transition">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button class="text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    
+<!-- Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-40">
+    <div class="container mx-auto px-6 py-3">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="flex items-center">
+                    <span class="text-2xl font-bold text-primary">PR<span class="text-secondary">FABRICS</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-primary hover:text-secondary transition">Home</a>
+                <a href="#fabrics" class="text-primary hover:text-secondary transition">Fabrics</a>
+                <a href="#about" class="text-primary hover:text-secondary transition">About</a>
+                <a href="#contact" class="text-primary hover:text-secondary transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-primary focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
         </div>
-    </nav>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white">
+        <div class="container mx-auto px-6 py-3 flex flex-col space-y-4">
+            <a href="#home" class="text-primary hover:text-secondary transition py-2">Home</a>
+            <a href="#fabrics" class="text-primary hover:text-secondary transition py-2">Fabrics</a>
+            <a href="#about" class="text-primary hover:text-secondary transition py-2">About</a>
+            <a href="#contact" class="text-primary hover:text-secondary transition py-2">Contact</a>
+        </div>
+    </div>
+</nav>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle between hamburger and close icon
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    });
+</script>
     <!-- Hero Section -->
     <section id="home" class="relative bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
